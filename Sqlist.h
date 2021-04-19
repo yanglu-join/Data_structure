@@ -25,4 +25,11 @@ void push_front(Sqlist *list, ElemType x);
 //显示顺序表
 void show_list(Sqlist *list);
 
+//尾部删除
+void pop_back(Sqlist *list);
+
+//头部删除
+void pop_front(Sqlist *list);
+
+
 #endif

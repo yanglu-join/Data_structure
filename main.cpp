@@ -42,6 +42,13 @@ int main()
 				break;
 			case 3:
 				show_list(&mylist);
+				break;
+			case 4:
+				pop_back(&mylist);
+				break;
+			case 5:
+				pop_front(&mylist);
+				break;
 			default:
 				break;	
 		

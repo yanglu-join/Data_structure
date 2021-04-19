@@ -57,8 +57,30 @@ void push_front(Sqlist *list, ElemType x)
 }
 
 
+void pop_back(Sqlist *list)
+{
+	if(list->size == 0)
+	{
+		printf("顺序表已空，无法尾部删除\n");
+		return;
+	}
+	list->size--;
+}
 
 
+void pop_front(Sqlist *list)
+{
+	if(list->size == 0)
+	{
+		printf("顺序表已空，无法头部删除\n");
+		return;
+	}
+	for(int i = 0; i < list->size-1; i++)
+	{
+		list->base[i] = list->base[i + 1];
+	}
+	list->size--;
+}
 
 
 
