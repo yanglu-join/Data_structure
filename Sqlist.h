@@ -19,6 +19,9 @@ void InitSqlist(Sqlist *list);
 //尾部插入
 void push_back(Sqlist *list, ElemType x);
 
+//头部插入
+void push_front(Sqlist *list, ElemType x);
+
 //显示顺序表
 void show_list(Sqlist *list);
 

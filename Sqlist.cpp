@@ -40,6 +40,21 @@ void show_list(Sqlist *list)
 }
 
 
+void push_front(Sqlist *list, ElemType x)
+{
+	if(list->size >= list->capcity)
+	{
+		printf("顺序表已满，不能头部插入\n");
+		return;
+	}
+	//所有的元素往后移动
+	for(int i = list->size; i > 0; --i)
+	{
+		list->base[i] = list->base[i-1];
+	}
+	list->base[0] = x;
+	list->size++;
+}
 
 
 

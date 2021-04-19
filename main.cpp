@@ -33,6 +33,13 @@ int main()
 					push_back(&mylist, Item);
 				}
 				break;
+			case 2:
+				printf("请输入要插入的数据（-1结束）：");
+				while(scanf("%d",&Item), Item != -1)
+				{
+					push_front(&mylist, Item);
+				}
+				break;
 			case 3:
 				show_list(&mylist);
 			default:
