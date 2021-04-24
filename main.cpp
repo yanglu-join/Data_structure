@@ -7,6 +7,7 @@ int main()
 	InitSqlist(&mylist);
 	ElemType Item;
 	int select = 1;
+	int pos    = 0;
 	while (select)
 	{
 		printf("*********************************\n");
@@ -49,11 +50,48 @@ int main()
 			case 5:
 				pop_front(&mylist);
 				break;
+			case 6:
+				printf("请输入要插入的位置：");
+				scanf("%d", &pos);
+				printf("请输入要插入的数据：");
+				scanf("%d", &Item);
+				insert_pos(&mylist, pos, Item);
+				break;
+			case 7:			
+				printf("请输入要查找的数据：");
+				scanf("%d", &Item);
+				pos = find(&mylist, Item);
+				printf("%d\n", pos);
+				break;
+			case 8:
+				printf("顺序表长度为：%d\n", length(&mylist));	
+				break;
+			case 9:
+				printf("请输入要删除元素的位置：");
+				scanf("%d", &pos);
+				delete_pos(&mylist, pos);
+				break;
+			case 10:
+				printf("请输入要删除的元素：");
+				scanf("%d", &Item);
+				delete_val(&mylist, Item);
+				break;
+			case 11:
+				sort(&mylist);
+				break;
+			case 12:
+				resver(&mylist);
+				break;
+			case 13:
+				clear(&mylist);
+				break;
+			case 14:
+				destroy(&mylist);
+				break;
 			default:
 				break;	
-		
-			
 		}
+		//destroy(&mylist);
 	}	
 	return 0;
 }	

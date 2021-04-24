@@ -31,5 +31,33 @@ void pop_back(Sqlist *list);
 //头部删除
 void pop_front(Sqlist *list);
 
+//按位置插入
+void insert_pos(Sqlist *list, int pos, ElemType x);
+
+//按值查找，返回位置
+int find(Sqlist *list, ElemType x);
+
+//求顺序表长度
+int length(Sqlist *list);
+
+//按位置删除
+void delete_pos(Sqlist *list, int pos);
+
+//按值删除
+void delete_val(Sqlist *list, ElemType x);
+
+//排序（冒泡）
+void sort(Sqlist *list);
+
+//反转
+void resver(Sqlist *list);
+
+//清除
+void clear(Sqlist *list);
+
+//摧毁
+void destroy(Sqlist *list);
+
+
 
 #endif
